@@ -1,13 +1,13 @@
 %% Buckley Leverett upwind terceira ordem (MUSCL k=1/3)
 clear all; clc;
 %% Dados da malha
-ne = 2000;           % Saturacao Irredutivel da Agua
+ne = 10;           % Saturacao Irredutivel da Agua
 xl = 0;
 xr = 1;
 dx = (xr - xl)/ne;
 x = xl:dx:xr; 
 xe=x(1)+dx/2:dx:x(end)-dx/2;
-CFL = 0.01;          % Condicao de CFL
+CFL = 0.4;          % Condicao de CFL
 dt = CFL*dx;  t =0; tmax = 0.2;
 nsteps = round(tmax/dt);
 
